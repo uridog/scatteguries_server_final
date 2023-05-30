@@ -273,7 +273,7 @@ def handle_client(client_socket):
             while client_done is False:
                 try:
                     if data == " ":
-                        if (time.time() - start_time) > 5 and broadcast_end is False:
+                        if (time.time() - start_time) > 30 and broadcast_end is False:
                             broadcast("Time is up, turn finished@ ending turn", "10", clients)
                             broadcast_end = True
                             client_done = True
